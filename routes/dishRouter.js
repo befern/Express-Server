@@ -56,7 +56,7 @@ dishRouter.route('/:dishId')
     res.end('POST operation not supported on /dishes/' + req.params.dishId);
 })
 .put((req, res, next) => {
-    Dishes.findOneAndUpdate(req.params.dishId, { 
+    Dishes.findByIdAndUpdate(req.params.dishId, { 
         $set: req.body
     }, { new: true })
     .then((dish) => {
