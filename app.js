@@ -18,7 +18,7 @@ mongoose.Promise = require('bluebird');
 
 const Dishes = require('./models/dishes');
 
-const url = 'mongodb://localhost:27017/conFusion';
+const url = 'mongodb://localhost:27017/server';
 const connect = mongoose.connect(url);
 
 connect.then((db) => {
